@@ -3,10 +3,12 @@
  */
 public class Employee_wage {
 	
+
 	public static final int wagePerHour = 20;
 	public static final int empFullTime = 1;
 	public static final int empPartTime = 2;
-	public static final int workingDays = 20;
+	public static final int totalWorkingDays = 20;
+	public static final int totalWorkingHours = 100;
 	
 
 	public static void main(String[] args) {
@@ -20,24 +22,24 @@ public class Employee_wage {
 
 		int employeeWage = 0;
 		int workingHours = 0;
+		int workingDays = 0;
 		int totalEmpWage = 0;
-
 	
 		/*
 		 * using math.floor 
 		 */
 		int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 		/*
-		 * using for loop
+		 * using while loop
 		 */
 		
-		for (int day = 0; day <= workingDays; day++) {
-		
+		while (workingHours <= totalWorkingHours && workingDays <= totalWorkingDays ) {
+			
+			workingDays++;
 			
 			/*
 			 * verifying by switch case
-			 */
-			switch (empCheck) {
+			 */			switch (empCheck) {
 
 		case empFullTime:
 			
@@ -57,7 +59,7 @@ public class Employee_wage {
 			
 			
 		}
-		
+	
 		employeeWage = wagePerHour * workingHours;
 		totalEmpWage += employeeWage;
 		System.out.println("employee wage = " + employeeWage);
@@ -68,4 +70,3 @@ public class Employee_wage {
 	}
 
 	}
-
