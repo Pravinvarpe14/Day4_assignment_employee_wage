@@ -1,4 +1,6 @@
-
+/*
+ * Employee wage programme
+ */
 public class Employee_wage {
 
 	public static void main(String[] args) {
@@ -7,11 +9,13 @@ public class Employee_wage {
 		 * welcome message
 		 */
 		System.out.println("Welcome to employee wage computation programme");
-
 		/*
 		 * taking variable
 		 */
 		int isPresent = 1;
+		int wagePerHour = 20;
+		int workingHours = 8;
+		int employeeWage = wagePerHour * workingHours;
 		/*
 		 * using math.floor 
 		 */
@@ -25,11 +29,10 @@ public class Employee_wage {
 		
 			
 			System.out.println("Employee is present...");
+			System.out.println("Employee wage = " + employeeWage);
 		} else {
 			
 			System.out.println("Employee is absent...");
 		}
-		
 	}
-
 }
